@@ -1,0 +1,20 @@
+{
+  "provenance": "synthetic_demo",
+  "network": "FICTIONAL_ETHEREUM_LIKE_DATA_NOT_MAINNET",
+  "block_count": 96,
+  "start_height": 21000000,
+  "end_height": 21000095,
+  "start_utc": "2024-01-01T00:00:00+00:00",
+  "end_utc": "2024-01-01T00:19:06+00:00",
+  "mean_utilization": 0.5907530173611111,
+  "mean_base_fee_gwei": 71.65737914698958,
+  "total_execution_base_fee_burn_eth": 118.89033512545691,
+  "anomaly_count": 0,
+  "mean_tx_per_block": 110.3125,
+  "methodology": {
+    "utilization": "execution gasUsed / execution gasLimit",
+    "execution_base_fee_burn_eth": "baseFeePerGas (wei) * gasUsed / 1e18; excludes blob gas burn, tips, MEV",
+    "anomaly": "gas-utilization > rolling prior 12 blocks median + 3 * max(1.4826*MAD, 0.05)",
+    "scope": "block-header observations only; does not measure token transfers, DeFi protocol flow, users or PnL"
+  }
+}
